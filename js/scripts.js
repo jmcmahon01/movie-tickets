@@ -6,18 +6,24 @@ function Ticket(movie, timeOfDay, age) {
 }
 
 Ticket.prototype.calculatePrice = function () {
-  let baseMoviePrice = 10;
+  let basePrice = 10;
+  let oldMovie = 0;
+  let matineeDiscount = 0;
+  let seniorDiscount = 0;
+
+
   if (this.movie === "old movie") {
-    return baseMoviePrice -= 2;
+    oldMovie = 2;
   }
   if (this.timeOfDay === "matinee") {
-    return baseMoviePrice -= 1;
+    matineeDiscount = 1;
   }
   if (this.age >= 65) {
-    return baseMoviePrice -= 3
+    seniorDiscount = 3;
   }
-}
-
+  let totalPrice = basePrice - oldMovie - matineeDiscount - seniorDiscount;
+  return totalPrice;
+};
 
 
 
