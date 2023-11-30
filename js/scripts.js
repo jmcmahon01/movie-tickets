@@ -12,7 +12,7 @@ Ticket.prototype.calculatePrice = function () {
   let seniorDiscount = 0;
 
 
-  if (this.movie === "old movie") {
+  if (this.movie === "All Dogs Go To Heaven" || this.movie === "CasaBlanca" || this.movie === "The Princess Bride") {
     oldMovie = 2;
   }
   if (this.timeOfDay === "matinee") {
@@ -24,7 +24,23 @@ Ticket.prototype.calculatePrice = function () {
   let totalPrice = basePrice - oldMovie - matineeDiscount - seniorDiscount;
   return totalPrice;
 };
+//UI logic
+document.getElementById('calculateButton').addEventListener('click', function () {
+  const movie = document.getElementById('movie').value;
+  const timeOfDay = document.getElementById('timeOfDay').value;
+  const age = document.getElementById('age').value;
 
+  const ticket = new Ticket(movie, timeOfDay, age);
+
+  // Display the result on the webpage
+  document.getElementById('displayMovie').textContent = movie;
+  document.getElementById('displayTimeOfDay').textContent = timeOfDay;
+  document.getElementById('displayAge').textContent = age;
+  document.getElementById('displayPrice').textContent = ticket.calculatePrice();
+
+  // Show the ticket details section
+  document.getElementById('ticketDetails').style.display = 'block';
+});
 
 
 

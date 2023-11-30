@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/scripts.js"></script>
   <title>The Big Picture Show</title>
 </head>
 
@@ -39,27 +38,41 @@
       age
       to see if you qualify for our senior discount.</p>
   </div>
-  <label for="movie-selection">Select a Movie:</label>
-  <select id="movie" name="movie">
-    <option value="oldMovie1">All Dogs Go To Heaven</option>
-    <option value="oldMovie2">CasaBlanca</option>
-    <option value="oldMovie3">The Princess Bride</option>
-    <option value="newMovie1">Openheimer</option>
-    <option value="newMovie2">The Princess Bride</option>
-  </select>
-  <label for="timeOfDay">Select Time of Day:</label>
-  <select id="timeOfDay" name="timeOfDay">
-    <option value="morning">Morning</option>
-    <option value="matinee">Matinee</option>
-    <option value="evening">Evening</option>
-  </select>
-  <label for="age">Enter Your Age:</label>
-  <input type="number" id="age" name="age">
-  <button type="submit">Calculate ticket price</button>
-  </form>
+  <div>
+    <form id="ticketForm">
+      <label for="movie">Select a Movie:</label>
+      <select id="movie" name="movie">
+        <option value="All Dogs Go To Heaven">All Dogs Go To Heaven</option>
+        <option value="CasaBlanca">CasaBlanca</option>
+        <option value="The Princess Bride">The Princess Bride</option>
+        <option value="Openheimer">Openheimer</option>
+        <option value="Barbie Movie">Barbie Movie</option>
+      </select>
 
-  </form>
+      <label for="timeOfDay">Select Time of Day:</label>
+      <select id="timeOfDay" name="timeOfDay">
+        <option value="morning">Morning</option>
+        <option value="matinee">Matinee</option>
+        <option value="evening">Evening</option>
+      </select>
 
+      <label for="age">Enter Your Age:</label>
+      <input type="number" id="age" name="age">
+
+      <button type="button" id="calculateButton">Calculate Ticket Price</button>
+    </form>
+
+    <div id="ticketDetails" class ="hidden">
+      <h2>Ticket Details</h2>
+      <p><strong>Movie:</strong> <span id="displayMovie"></span></p>
+      <p><strong>Time of Day:</strong> <span id="displayTimeOfDay"></span></p>
+      <p><strong>User Age:</strong> <span id="displayAge"></span></p>
+      <p><strong>Calculated Price:</strong> $<span id="displayPrice"></span></p>
+    </div>
+
+    
+  </div>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
