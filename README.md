@@ -13,3 +13,7 @@ Test: "If the movie selected is a matinee, the function will subtract 1 dollars"
 code: calculatePrice("movie", "matinee", 21);
 Output: 8
 
+Test: "If the user age is above 65, the function will subtract 3 dollars"
+code: calculatePrice("movie", "2:00", 66);
+Output: 7
+
