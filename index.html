@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>The Big Picture Show</title>
+</head>
+
+<body>
+  <div>
+    <h1>The Big Picture Show!</h1>
+    <p>welcome to The Big Picture Show! We have a wonderful selection of the time tested classics, the hot new releases,
+      and the lowest prices around! Take a look:
+    <ul>
+      <li>Standard movie ticket: $10.00</li>
+      <li>Classics Disount: $2.00 off!</li>
+      <li>Matinee Discount (before 2:00pm): $1.00 off!</li>
+      <li>Senior Discount (65 or older): $3.00 off!</li>
+    </ul>
+    </p>
+
+    <h2>Here is our current movie selection:
+      <h3>The Classics:</h3>
+      <ul>
+        <li>All Dogs Go To Heaven</li>
+        <li>CasaBlanca</li>
+        <li>The Princess Bride</li>
+      </ul>
+      <h3>The hot new releases: </h3>
+      <ul>
+        <li>Openheimer</li>
+        <li>Barbie Movie</li>
+      </ul>
+    </h2>
+    <p>In the form below, select which movie you would like to see, what time you would like to see it, and enter your
+      age
+      to see if you qualify for our senior discount.</p>
+  </div>
+  <label for="movie-selection">Select a Movie:</label>
+  <select id="movie" name="movie">
+    <option value="oldMovie1">All Dogs Go To Heaven</option>
+    <option value="oldMovie2">CasaBlanca</option>
+    <option value="oldMovie3">The Princess Bride</option>
+    <option value="newMovie1">Openheimer</option>
+    <option value="newMovie2">The Princess Bride</option>
+  </select>
+  <label for="timeOfDay">Select Time of Day:</label>
+  <select id="timeOfDay" name="timeOfDay">
+    <option value="morning">Morning</option>
+    <option value="matinee">Matinee</option>
+    <option value="evening">Evening</option>
+  </select>
+  <label for="age">Enter Your Age:</label>
+  <input type="number" id="age" name="age">
+  <button type="submit">Calculate ticket price</button>
+  </form>
+
+  </form>
+
+</body>
+
+</html>
