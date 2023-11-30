@@ -40,6 +40,13 @@ document.getElementById('calculateButton').addEventListener('click', function ()
 
   // Show the ticket details section
   document.getElementById('ticketDetails').style.display = 'block';
+  document.getElementById('resubmitButton').addEventListener('click', function () {
+    // Reset the form
+    document.getElementById('ticketForm').reset();
+
+    // Hide the ticket details section
+    document.getElementById('ticketDetails').style.display = 'none';
+  });
 });
 
 
