@@ -9,3 +9,7 @@ Test: "The base price of any movie is 10. If the movie selected is an older movi
 Code: calculatePrice("old movie", 2:00, 21);
 Output: 8
 
+Test: "If the movie selected is a matinee, the function will subtract 1 dollars"
+code: calculatePrice("movie", "matinee", 21);
+Output: 8
+

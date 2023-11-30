@@ -10,6 +10,9 @@ Ticket.prototype.calculatePrice = function () {
   if (this.movie === "old movie") {
     return baseMoviePrice -= 2;
   }
+  if (this.timeOfDay === "matinee") {
+    return baseMoviePrice -= 1;
+  }
 }
 
 
